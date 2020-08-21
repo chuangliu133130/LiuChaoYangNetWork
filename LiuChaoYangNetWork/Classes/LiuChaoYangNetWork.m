@@ -7,7 +7,6 @@
 //
 
 #import "LiuChaoYangNetWork.h"
-#import "AFNetworking.h"
 
 @implementation LiuChaoYangNetWork
 
@@ -16,23 +15,23 @@
 {
  
     
-     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-
-     manager.requestSerializer = [AFJSONRequestSerializer serializer];//请求
-     manager.responseSerializer = [AFHTTPResponseSerializer serializer];//响应
-     manager.requestSerializer.timeoutInterval = 5.0f;
-     
-    [manager GET:strURL parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
-          
-          
-          
-      } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-          sucessBlock(responseObject);
-          
-      } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-          failureBlock(error);
-          
-      }];
+//     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+//
+//     manager.requestSerializer = [AFJSONRequestSerializer serializer];//请求
+//     manager.responseSerializer = [AFHTTPResponseSerializer serializer];//响应
+//     manager.requestSerializer.timeoutInterval = 5.0f;
+//
+//    [manager GET:strURL parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+//
+//
+//
+//      } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//          sucessBlock(responseObject);
+//
+//      } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//          failureBlock(error);
+//
+//      }];
     
     
     
@@ -44,22 +43,25 @@
 + (void)postNetworkByURL: (NSString *)strURL  AndParameter: (id)parameters success:(void(^)(id responseObject))sucessBlock  failure:(void(^)(NSError *responseObject))failureBlock
 {
  
+//    
+//     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+//
+//        manager.requestSerializer = [AFJSONRequestSerializer serializer];//请求
+//        manager.responseSerializer = [AFHTTPResponseSerializer serializer];//响应
+//        manager.requestSerializer.timeoutInterval = 5.0f;
+//        
+//       [manager POST:strURL parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+//             
+//             
+//             
+//         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//             sucessBlock(responseObject);
+//             
+//         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//             failureBlock(error);
+//             
+//         }];
     
-     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-
-        manager.requestSerializer = [AFJSONRequestSerializer serializer];//请求
-        manager.responseSerializer = [AFHTTPResponseSerializer serializer];//响应
-        manager.requestSerializer.timeoutInterval = 5.0f;
-        
-       [manager POST:strURL parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
-             
-             
-             
-         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-             sucessBlock(responseObject);
-             
-         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-             failureBlock(error);
-             
-         }];};
+    
+};
 @end
