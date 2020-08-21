@@ -1,0 +1,6 @@
+framework module LiuChaoYangNetWork {
+  umbrella header "LiuChaoYangNetWork-umbrella.h"
+
+  export *
+  module * { export * }
+}
