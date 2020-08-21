@@ -7,7 +7,6 @@
 //
 
 #import "LiuChaoYangNetWork.h"
-#import "AFNetworking-prefix.pch"
 #import "AFNetworking.h"
 
 @implementation LiuChaoYangNetWork

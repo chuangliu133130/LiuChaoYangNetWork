@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AFNetworking-prefix.pch"
 #import "AFNetworking.h"
 
 NS_ASSUME_NONNULL_BEGIN
