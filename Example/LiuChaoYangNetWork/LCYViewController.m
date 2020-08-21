@@ -7,7 +7,7 @@
 //
 
 #import "LCYViewController.h"
-
+#import "LiuChaoYangNetWork.h"
 @interface LCYViewController ()
 
 @end
@@ -17,6 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+//    [LiuChaoYangNetWork postNetworkByURL:<#(nonnull NSString *)#> AndParameter:<#(nonnull id)#> success:<#^(id  _Nonnull responseObject)sucessBlock#> failure:<#^(NSError * _Nonnull responseObject)failureBlock#>];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
